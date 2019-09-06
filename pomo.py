@@ -47,7 +47,8 @@ if __name__ == "__main__":
     rest_sound = AudioSegment.from_mp3(config["rest_sound"])
     for a in range(sessions):
         print("Starting Pomodoro session #"+str(a+1)+".")
-        play(work_sound)
+        if a == 0:
+            play(work_sound)
         print("Work!")
         statistics["work_starts"].append(
             datetime.now().strftime("%d.%m.%Y-%H:%M:%S")
@@ -77,3 +78,4 @@ if __name__ == "__main__":
             statistics["rest"] += 1
             with open(statistics_path, "w") as oh:
                 json.dump(statistics, oh)
+        play(work_sound)
