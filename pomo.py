@@ -71,6 +71,7 @@ if __name__ == "__main__":
             with open(statistics_path, "w") as oh:
                 json.dump(statistics, oh)
             _ = input("Next session?")
+            play(work_sound)
         else:
             print("Long rest!")
             for a in tqdm(list(range(long_rest*60))):
@@ -78,4 +79,4 @@ if __name__ == "__main__":
             statistics["rest"] += 1
             with open(statistics_path, "w") as oh:
                 json.dump(statistics, oh)
-        play(work_sound)
+            play(work_sound)
