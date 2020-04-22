@@ -4,7 +4,7 @@ Simple CLI Pomodoro timer
 Install:
 
 ```console
-$ git clone git@github.com:bakirillov/pomo.py.git
+$ git clone https://github.com/bakirillov/pomo.py.git
 $ cd pomo.py
 $ # create virtual env
 $ pip3 install .
